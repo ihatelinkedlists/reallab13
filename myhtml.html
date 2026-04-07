@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bret Anderson</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: lightblue;">
+
+  <h1>About me (Bret Anderson)</h1>
+
+  <h2>Education</h2>
+  <p>
+    I went to Roseburg High School in Oregon.
+    I am currently a freshman majoring in Cybersecurity at BYU.
+    I plan on getting a Bachelor's degree.
+  </p>
+
+  <h2>Hobbies</h2>
+  <p>
+    I like running and playing Beat Saber.
+    I like to run 3 miles around campus at night.
+    I am #1108 in Beat Saber.
+  </p>
+
+  <h2>Family</h2>
+  <p>
+    I have an older brother and a younger sister.
+    My brother is 22 and attending BYU. He is very good at playing the drums.
+    My sister is 15 and is a freshman at Roseburg High School.
+    She is pretty good at math.
+  </p>
+
+  <h2 id="christmas-countdown"></h2>
+
+  <script>
+    function daysUntilChristmas() {
+      const now = new Date();
+
+      let christmas = new Date(now.getFullYear(), 11, 25);
+
+      if (now > christmas) {
+        christmas = new Date(now.getFullYear() + 1, 11, 25);
+      }
+
+      const diffTime = christmas - now;
+      const diffDays = (diffTime / (1000 * 60 * 60 * 24));
+
+      document.getElementById("christmas-countdown").textContent =
+        diffDays + " days until Christmas";
+    }
+
+    daysUntilChristmas();
+  </script>
+
+</body>
+</html>
